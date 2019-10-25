@@ -13,6 +13,11 @@ quotes:Quote[] = [
   new Quote("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah"),
   new Quote("Harold Abelson","Programs must be written for people to read, and only incidentally for machines to execute.","Bernad"),
 ]
+
+toggle(index){
+  this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
+}
+
   constructor() { }
 
   ngOnInit() {

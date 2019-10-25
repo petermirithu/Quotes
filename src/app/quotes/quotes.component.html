@@ -1,8 +1,13 @@
 <div class="body">
   <h1>Welcome to Quote App.</h1>
   <hr>
+
   <div *ngFor='let quote of quotes;let i= index'><div>
   <h4>{{quote.quoteIt}} ---by--- {{quote.author}}</h4>
   <button (click)='toggle(i)'>More INFO</button>
-  <app-quote-detail *ngIf='quote.showsubmitter' [quote]='quote'></app-quote-detail>
+
+  <div *ngIf='quote.showSubmitter'>
+    <app-quote-detail [quote]='quote'></app-quote-detail>
+  </div>
+
 </div>
