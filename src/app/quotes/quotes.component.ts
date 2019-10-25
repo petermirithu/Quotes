@@ -9,14 +9,16 @@ import {Quote} from '../quote'
 export class QuotesComponent implements OnInit {
 
 quotes:Quote[] = [
-  new Quote("Why The Lucky Stiff", "when you dont create things you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create.", "Pyra"),
-  new Quote("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah"),
-  new Quote("Harold Abelson","Programs must be written for people to read, and only incidentally for machines to execute.","Bernad"),
+  new Quote("Harold Abelson","Programs must be written for people to read, and only incidentally for machines to execute.","Pyra",new Date(2019,10,4)),
+  new Quote("Why The Lucky Stiff", "when you dont create things you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create.", "Bernad",new Date(2014,2,15)),
+  new Quote("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah",new Date(1999,8,24)),
+  
 ]
 
 toggle(index){
   this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
 }
+
 deleteQuote(isDelete,index){
   if (isDelete){
     this.quotes.splice(index,1);
