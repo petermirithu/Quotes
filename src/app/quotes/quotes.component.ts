@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {QuoteClass} from '../quote-class';
+import {Quote} from '../quote'
 
 @Component({
   selector: 'app-quotes',
@@ -8,10 +8,10 @@ import {QuoteClass} from '../quote-class';
 })
 export class QuotesComponent implements OnInit {
 
-quotes:QuoteClass[] = [
-  new QuoteClass("Why The Lucky Stiff", "when you dont create things you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create", "Pyra"),
-  new QuoteClass("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah"),
-  new QuoteClass("Harold Abelson","Programs must be written for people to read, and only incidentally for machines to execute.","Bernad"),
+quotes:Quote[] = [
+  new Quote("Why The Lucky Stiff", "when you dont create things you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create", "Pyra"),
+  new Quote("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah"),
+  new Quote("Harold Abelson","Programs must be written for people to read, and only incidentally for machines to execute.","Bernad"),
 ]
   constructor() { }
 
