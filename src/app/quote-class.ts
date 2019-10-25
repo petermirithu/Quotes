@@ -1,5 +1,9 @@
 export class QuoteClass {
-  author: string;
-  quote: string;
-  submitter: string;
+  
+  constructor(public author: string,public quote: string, public submitter: string){
+
+  }
+  
+  
+  
 }
