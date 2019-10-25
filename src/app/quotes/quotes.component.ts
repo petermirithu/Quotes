@@ -17,7 +17,11 @@ quotes:Quote[] = [
 toggle(index){
   this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
 }
-
+deleteQuote(isDelete,index){
+  if (isDelete){
+    this.quotes.splice(index,1);
+  }
+}
   constructor() { }
 
   ngOnInit() {
