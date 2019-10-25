@@ -7,7 +7,7 @@
   <button (click)='toggle(i)'>More INFO</button>
 
   <div *ngIf='quote.showSubmitter'>
-    <app-quote-detail [quote]='quote'></app-quote-detail>
+    <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quote-detail>
   </div>
 
 </div>
