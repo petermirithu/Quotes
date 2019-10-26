@@ -25,14 +25,18 @@ deleteQuote(isDelete,index){
   }
 }
 
-// voteForQuote(Voting){
-//   var votes;
-//   if (Voting == true){
-//     votes =+1
-//   }else{
+votingYes(isupVote,index){
+  if(isupVote){
+    this.quotes[index].upVote++
+  }
+  
+}
 
-//   }
-// }
+votingNo(isdownVote,index){
+  if(isdownVote){
+    this.quotes[index].downVote++
+  }
+}
 
 addNewQuote(quote){
   this.quotes.push(quote)

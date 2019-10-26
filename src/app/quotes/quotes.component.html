@@ -12,7 +12,7 @@
         <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
 
         <div *ngIf='quote.showSubmitter'>
-          <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isVote) = 'voteForQuote($event)'></app-quote-detail>
+          <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isupVote) = 'votingYes($event,i)' (isdownVote)="votingNo($event,i)"></app-quote-detail>
         </div>
       </div>
     </div>
