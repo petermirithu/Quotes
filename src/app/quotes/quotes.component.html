@@ -3,9 +3,9 @@
   <hr>
 
   <div *ngFor='let quote of quotes;let i= index'><div>
-  <h4>{{quote.quoteIt}}</h4>
+  <h4><b>{{quote.quoteIt}}</b></h4>
   <h5>Author: {{quote.author}}</h5>
-  <button (click)='toggle(i)'>More INFO</button>
+  <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
 
   <div *ngIf='quote.showSubmitter'>
     <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quote-detail>

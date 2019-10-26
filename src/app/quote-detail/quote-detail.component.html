@@ -1,3 +1,4 @@
-<p>Posted on: {{quote.createdDate}}</p>
-<p>Posted by: {{quote.submitter}}</p>
-<button (click)=quoteDelete(true)>Delete Quote</button>
+<p>Quote Posted on: {{quote.createdDate|date|uppercase}}</p>
+<p>Quote Posted by: {{quote.submitter}}</p>
+<p>Quote existence: {{quote.createdDate|dateCount}} days.</p>
+<button class="btn btn-danger" (click)=quoteDelete(true)>Delete Quote</button>
