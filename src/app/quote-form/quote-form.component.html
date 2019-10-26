@@ -5,24 +5,24 @@
       <div class="form-group">
 
           <label for="author">Author</label>
-          <input type="text" required class="form-control" id="author">
+          <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
+          <p>{{newQuote.author}}</p>
 
       </div>
       <div class="form-group">
 
           <label for="quoteIt">Quote</label>
-          <textarea required class="form-control" id="quoteIt" rows="4" ></textarea>
-
+          <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt"></textarea>
+          <p>{{newQuote.quoteIt}}</p>
       </div>
       <div class="form-group">
           <label for="submitter">Name of Submitter</label>
-          <input type='text' id="submitter" required class="form-control">
-
+          <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter">
+          <p>{{newQuote.submitter}}</p>
       </div>
       <div class="form-group">
-          <label for="createdDate">Date of post</label>
-          <input type='date' id="createdDate" required class="form-control">
-
+          <label for="createdDate">Date of post</label>          
+          <p>{{newQuote.createdDate|date}}</p>
       </div>
   </form>
 </div>
