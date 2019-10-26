@@ -24,6 +24,16 @@ deleteQuote(isDelete,index){
     this.quotes.splice(index,1);
   }
 }
+
+// voteForQuote(Voting){
+//   var votes;
+//   if (Voting == true){
+//     votes =+1
+//   }else{
+
+//   }
+// }
+
   constructor() { }
 
   ngOnInit() {
