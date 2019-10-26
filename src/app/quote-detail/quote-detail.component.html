@@ -1,4 +1,5 @@
 <p>Quote Posted on: {{quote.createdDate|date|uppercase}}</p>
 <p>Quote Posted by: {{quote.submitter}}</p>
 <p>Quote existence: {{quote.createdDate|dateCount}} days.</p>
+<button class="btn btn-success">UpVote</button> <button class="btn btn-dark">DownVote</button> <br>
 <button class="btn btn-danger" (click)=quoteDelete(true)>Delete Quote</button>
