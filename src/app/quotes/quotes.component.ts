@@ -1,4 +1,4 @@
-import { Component, OnInit,Output} from '@angular/core';
+import { Component, OnInit,Output, EventEmitter} from '@angular/core';
 import {Quote} from '../quote';
 
 @Component({
@@ -40,7 +40,10 @@ votingNo(isdownVote,index){
     this.quotes[index].downVote++
   }
 }
+// @Output() highlight = new EventEmitter<void>();
 
+
+  
 addNewQuote(quote){
   this.quotes.push(quote);
 }

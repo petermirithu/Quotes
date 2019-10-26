@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <p>Quote Posted on: {{quote.createdDate|date|uppercase}}</p>
 <p>Quote Posted by: {{quote.submitter}}</p>
 <p>Quote existence: {{quote.createdDate|dateCount}} days.</p>
-<button class="btn btn-success" (click)="upVote(true)">UpVote</button> 
-<button class="btn btn-dark" (click)="downVote(true)">DownVote</button> <br><br>
+<i class="fa fa-thumbs-up" style="font-size:36px;color:green;margin:0px" (click)="upVote(true)">{{quote.upVote}}</i> 
+<i class="fa fa-thumbs-down" style="font-size:36px;color: red;margin-left:90px" (click)="downVote(true)">{{quote.downVote}}</i> <br><br>
 <button class="btn btn-danger" (click)=quoteDelete(true)>Delete Quote</button>
