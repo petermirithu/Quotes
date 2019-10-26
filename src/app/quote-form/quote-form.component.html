@@ -4,7 +4,7 @@
   <form  (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' ng-required="true">
       <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
         <p>Author Name is required!</p>
       </div>
@@ -13,7 +13,7 @@
 
     <div class="form-group">
       <label for="quoteIt">Quote</label>
-      <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt" #quoteIt='ngModel' required></textarea>
+      <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt" #quoteIt='ngModel' ng-required="true"></textarea>
       <div [hidden]="quoteIt.valid || quoteIt.pristine" class="alert alert-danger">
         <p>Quote is required!</p>
       </div>
@@ -22,7 +22,7 @@
 
     <div class="form-group">
       <label for="submitter">Name of Submitter</label>
-      <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel' required>
+      <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel' ng-required="true">
       <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
         <p>Submitter Name is required!</p>
       </div>

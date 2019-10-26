@@ -7,8 +7,8 @@
       
         <h6><b>{{quote.quoteIt}}</b></h6>
         <h6>Author: {{quote.author}}</h6>
-        <h6>UpVotes:        DownVotes:</h6>
-              
+        <h6>UpVotes:{{quote.upVote}}        DownVotes:{{quote.downVote}}</h6>
+
         <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
 
         <div *ngIf='quote.showSubmitter'>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <app-quote-form></app-quote-form>
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
 
