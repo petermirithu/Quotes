@@ -42,8 +42,7 @@ votingNo(isdownVote,index){
 }
 
 addNewQuote(quote){
-  this.quotes.push(quote)
-  ;
+  this.quotes.push(quote);
 }
   constructor() { }
 
