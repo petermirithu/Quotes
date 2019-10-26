@@ -1,6 +1,6 @@
 <div class="image">
 <h1 id="home">Welcome to Quote App.</h1>
-<button class="btn btn-danger"><a href="#body" style="color:black">Get Started</a></button>
+<button class="btn btn-danger"><a href="#body" style="color:black;font-size:20px">Get Started</a></button>
 </div>
 <div class="body" id="body">
 <h1>Quote App</h1>  
@@ -11,7 +11,7 @@
       
         <h6><b>{{quote.quoteIt}}</b></h6>
         <h6>Author: {{quote.author}}</h6>
-        <h6>UpVotes:{{quote.upVote}}        DownVotes:{{quote.downVote}}</h6>
+        <h6><i>UpVotes:{{quote.upVote}}</i> <i style="margin-left:30px">DownVotes:{{quote.downVote}}</i></h6>
 
         <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
 
