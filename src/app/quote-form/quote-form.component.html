@@ -1,28 +1,36 @@
 <div class="container-fluid">
   <h2 class="text-center">Post a new Quote</h2>
   <hr>
-  <form>
-      <div class="form-group">
+  <form  #quoteForm='ngForm'>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+        <p>Author Name is required!</p>
+      </div>
+      <p>{{newQuote.author}}</p>
+    </div>
 
-          <label for="author">Author</label>
-          <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
-          <p>{{newQuote.author}}</p>
+    <div class="form-group">
+      <label for="quoteIt">Quote</label>
+      <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt" #quoteIt='ngModel' required></textarea>
+      <div [hidden]="quoteIt.valid || quoteIt.pristine" class="alert alert-danger">
+        <p>Quote is required!</p>
+      </div>
+      <p>{{newQuote.quoteIt}}</p>
+    </div>
 
+    <div class="form-group">
+      <label for="submitter">Name of Submitter</label>
+      <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel' required>
+      <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+        <p>Submitter Name is required!</p>
       </div>
-      <div class="form-group">
-
-          <label for="quoteIt">Quote</label>
-          <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt"></textarea>
-          <p>{{newQuote.quoteIt}}</p>
-      </div>
-      <div class="form-group">
-          <label for="submitter">Name of Submitter</label>
-          <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter">
-          <p>{{newQuote.submitter}}</p>
-      </div>
-      <div class="form-group">
-          <label for="createdDate">Date of post</label>          
-          <p>{{newQuote.createdDate|date}}</p>
-      </div>
+        <p>{{newQuote.submitter}}</p>
+    </div>
+    <div class="form-group">
+        <label for="createdDate">Date of post</label>          
+        <p>{{newQuote.createdDate|date}}</p>
+    </div>
   </form>
 </div>
