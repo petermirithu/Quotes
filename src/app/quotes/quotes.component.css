@@ -1,0 +1,13 @@
+.image{
+  background-size:cover; 
+  background-image:url('https://www.canva.com/learn/wp-content/uploads/2015/11/Life-Inspirational-Quote-Desktop-Wallpaper.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: 50% 50%;
+}
+#home{
+  padding-top: 30%;
+  padding-bottom: 10%;
+  color: gold;
+  text-align: center;
+}
