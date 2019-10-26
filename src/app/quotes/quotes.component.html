@@ -1,15 +1,24 @@
 <div class="body">
   <h1>Welcome to Quote App.</h1>
   <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes;let i= index'>
+      
+        <h6><b>{{quote.quoteIt}}</b></h6>
+        <h6>Author: {{quote.author}}</h6>
+        <h6>UpVotes:        DownVotes:</h6>
+              
+        <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
 
-  <div *ngFor='let quote of quotes;let i= index'><div>
-  <h4><b>{{quote.quoteIt}}</b></h4>
-  <h5>Author: {{quote.author}}</h5>
-  <h6>UpVotes:        DownVotes:</h6>
-  <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
-
-  <div *ngIf='quote.showSubmitter'>
-    <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isVote) = 'voteForQuote($event)'></app-quote-detail>
+        <div *ngIf='quote.showSubmitter'>
+          <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isVote) = 'voteForQuote($event)'></app-quote-detail>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div>
   </div>
 
 </div>
