@@ -11,3 +11,12 @@
   color: gold;
   text-align: center;
 }
+#body{
+  background-size:cover; 
+  background-image:url('http://www.m9c.net/uploads/15504646113.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: 50% 50%;
+  color:white;
+
+}
