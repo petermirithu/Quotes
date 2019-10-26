@@ -21,7 +21,10 @@ toggle(index){
 
 deleteQuote(isDelete,index){
   if (isDelete){
-    this.quotes.splice(index,1);
+    let toDelete = confirm(`Are you sure about deleting?`)
+    if (toDelete){
+      this.quotes.splice(index,1);
+    }
   }
 }
 
