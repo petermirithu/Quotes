@@ -13,7 +13,12 @@ quotes:Quote[] = [
   new Quote("Why The Lucky Stiff", "when you dont create things you become defined by your tastes rather than ability. your tastes only narrow & exclude people. so create.", "Bernad",new Date(2014,0,15),3,8),
   new Quote("Linus Torvalds", "Talk is cheap. Show me the code.","Jedidah",new Date(1999,8,24),8,5),  
 ];
-  
+
+get sort() {
+  return this.quotes.sort((a, b) => {
+    return (b.upVote) as any  - (a.upVote) as any;
+  });    
+} 
 toggle(index){
   this.quotes[index].showSubmitter = !this.quotes[index].showSubmitter;
 }
@@ -38,6 +43,16 @@ votingNo(isdownVote,index){
   if(isdownVote){
     this.quotes[index].downVote++
   }
+}
+
+@Output() isupVote = new EventEmitter<boolean>();
+@Output() isdownVote = new EventEmitter<boolean>();;
+
+upVote(yesvote:boolean){
+  this.isupVote.emit(yesvote);
+}
+downVote(noVote:boolean){
+  this.isdownVote.emit(noVote);
 }
 // @Output() highlight = new EventEmitter<void>();
 

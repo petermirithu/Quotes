@@ -7,10 +7,13 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-    
-    
-      <div *ngFor='let quote of quotes;let i= index'>
-        
+    <hr>
+    <div class="trend">
+      <h2>Trending Quote.</h2>
+      <p>{{quotes[0].quoteIt}} by {{quotes[0].author}}</p>
+    </div>
+    <div *ngFor='let quote of sort;let i= index'>
+      
         <h6><b><i>{{quote.quoteIt}}</i></b></h6>
         <h6>Author: {{quote.author}}</h6>
         <h6><i>UpVotes:{{quote.upVote}}</i> <i style="margin-left:30px">DownVotes:{{quote.downVote}}</i></h6>
@@ -18,13 +21,10 @@
         <button class="btn btn-primary" (click)='toggle(i)'>More INFO</button>
         
         <div *ngIf='quote.showSubmitter'>
-          <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isupVote) = 'votingYes($event,i)' (isdownVote)="votingNo($event,i)"></app-quote-detail>
+          <app-quote-detail [quote]='quote' (isDelete) = 'deleteQuote($event,i)' (isupVote) = 'votingYes($event,i)' (isdownVote)="votingNo($event,i)" (click)="upVote(true)" (click)="downVote(true)"></app-quote-detail>
         </div>
         <hr>
-      </div>
-      
-      <p>most voted {{quotes[0].quoteIt}}</p>
-
+      </div>          
     </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
