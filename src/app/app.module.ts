@@ -11,6 +11,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { SumbitvalidDirective } from './sumbitvalid.directive';
 import { HighlightDirective } from './highlight.directive';
 import { FormsModule}   from '@angular/forms';
+import { SortQuotesComponent } from './sort-quotes/sort-quotes.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FormsModule}   from '@angular/forms';
     DateCountPipe,
     QuoteFormComponent,
     SumbitvalidDirective,
-    HighlightDirective,     
+    HighlightDirective,
+    SortQuotesComponent,     
   ],
   imports: [
     BrowserModule,

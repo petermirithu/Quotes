@@ -7,9 +7,11 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
+    
+    
       <div *ngFor='let quote of quotes;let i= index'>
-      
-        <h6><b>{{quote.quoteIt}}</b></h6>
+        
+        <h6><b><i>{{quote.quoteIt}}</i></b></h6>
         <h6>Author: {{quote.author}}</h6>
         <h6><i>UpVotes:{{quote.upVote}}</i> <i style="margin-left:30px">DownVotes:{{quote.downVote}}</i></h6>
 
@@ -20,6 +22,9 @@
         </div>
         <hr>
       </div>
+      
+      <p>most voted {{quotes[0].quoteIt}}</p>
+
     </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
