@@ -1,40 +1,23 @@
 <div class="container-fluid">
-  <h2 class="text-center" style="color:yellow"><b>Post a new Quote</b></h2>
+  <h2 class="text-center">Post a new Quote</h2>
   <hr>
-  <form (ngSubmit)="submitQuote()" #quoteForm= 'ngForm'>
+  <form>
+      <div class="form-group">
 
-    <div class="form-group">
-      <label for="author" style="color:darkorange"><b>Author</b></label>
-      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' ng-required="true">
-      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-          <p>Author Name is required</p>
+          <label for="author">Author's Name</label>
+          <input type="text" required class="form-control" id="author">
+
       </div>
-      <p>{{newQuote.author}}</p>
-    </div>
+      <div class="form-group">
 
-    <div class="form-group">
-      <label for="quoteIt" style="color:darkorange"><b>Quote</b></label>
-      <textarea required class="form-control" id="quoteIt" rows="4" [(ngModel)]="newQuote.quoteIt" name="quoteIt" #quoteIt='ngModel' ng-required="true"></textarea>  
-      <div [hidden]="quoteIt.valid || quoteIt.pristine" class="alert alert-danger">
-          <p>Quote is required</p>
+          <label for="quoteIt">Quote</label>
+          <textarea class="form-control" id="quoteIt" rows="4" required></textarea>
+
       </div>
-          <p>{{newQuote.quoteIt}}</p>
-    </div>
-        
-    <div class="form-group">
-      <label for="submitter" style="color:darkorange"><b>Name of Submitter</b></label>
-      <input type='text' id="submitter" required class="form-control" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel' ng-required="true">      
-      <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
-          <p>Submitter Name is required</p>
+      <div class="form-group">
+          <label for="submitter">Name of Person Submiting</label>
+          <input type='date' id="submitter" required>
+
       </div>
-        <p>{{newQuote.submitter}}</p>
-    </div>
-
-    <div class="form-group">
-        <label for="createdDate" style="color:darkorange"><b>Date of post</b></label>          
-        <p>{{newQuote.createdDate|date}}</p>
-    </div>
-
-    <button type="submit" class="btn btn-block btn-success" (click)=quoteForm.resetForm({})><b>Post Quote</b></button>
   </form>
 </div>
