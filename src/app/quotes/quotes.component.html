@@ -10,7 +10,7 @@
     <hr>
     <div class="trend">
       <h2>Trending Quote.</h2>
-      <p>{{quotes[0].quoteIt}} by {{quotes[0].author}}</p>
+      <p appHighlight>{{quotes[0].quoteIt}} by {{quotes[0].author}}</p>
     </div>
     <div *ngFor='let quote of sort;let i= index'>
       
