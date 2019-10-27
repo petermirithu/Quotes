@@ -7,9 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 #### Authors' information
 *Peter Mirithu*
-    Email: pyra_m.k@yahoo.com
-    Address: 1394
-    Software Developer.
+    Email: pyra_m.k@yahoo.com <br>
+    Address: 1394 <br>
+    Software Developer.<br>
     Telephone N.O: 0790476167          
 ## Description
  This is an Angular web application that that enables one to see quotes which have been posted and enable more people to post/create new quotes.
@@ -23,7 +23,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9. and Bootstrap with css stylesheet.
 
  ## Support and contact details
- Incase of a problem, issue or need more clarification, feel free to send an email at a{pyra_m.k@yahoo.com}
+ Incase of a problem, issue or need more clarification, feel free to send an email @<br> {pyra_m.k@yahoo.com}<br>
  Contact Pyra at : 0790476167
 
  ### License
