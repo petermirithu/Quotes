@@ -54,12 +54,9 @@ upVote(yesvote:boolean){
 downVote(noVote:boolean){
   this.isdownVote.emit(noVote);
 }
-// @Output() highlight = new EventEmitter<void>();
 
 addNewQuote(quote){
-  if(quote){
-    let toquote = confirm(`Are you sure About this quote?`)
-    if(toquote)
+    if(quote){
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote);
   }
