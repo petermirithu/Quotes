@@ -3,6 +3,6 @@
 <p>Quote Posted on: {{quote.createdDate|date|uppercase}}</p>
 <p>Quote Posted by: {{quote.submitter}}</p>
 <p>Quote existence: {{quote.createdDate|dateCount}} days.</p>
-<i class="fa fa-thumbs-up" style="font-size:36px;color:green;margin:0px" (click)="upVote(true)">{{quote.upVote}}</i> 
-<i class="fa fa-thumbs-down" style="font-size:36px;color: red;margin-left:90px" (click)="downVote(true)">{{quote.downVote}}</i> <br><br>
+<i class="fa fa-thumbs-up" style="font-size:36px;color:green;margin:0px;cursor:pointer" (click)="upVote(true)">{{quote.upVote}}</i> 
+<i class="fa fa-thumbs-down" style="font-size:36px;color: red;margin-left:90px;cursor:pointer" (click)="downVote(true)">{{quote.downVote}}</i> <br><br>
 <button class="btn btn-danger" (click)=quoteDelete(true)>Delete Quote</button>

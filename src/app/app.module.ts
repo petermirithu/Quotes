@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { SumbitvalidDirective } from './sumbitvalid.directive';
 import { HighlightDirective } from './highlight.directive';
+import { FormsModule}   from '@angular/forms';
 
 
 @NgModule({
@@ -20,12 +21,12 @@ import { HighlightDirective } from './highlight.directive';
     DateCountPipe,
     QuoteFormComponent,
     SumbitvalidDirective,
-    HighlightDirective,    
+    HighlightDirective,     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
