@@ -23,7 +23,15 @@
   color:white;
 }
 .trend{
-  background-color: gray;
+  background-color: black;
   opacity: 0.8;
 }
-
+#home{
+  font-family: 'Nosifer', cursive;  
+}
+h2{
+  font-family: 'Fruktur', cursive;
+}
+#quote{
+  font-family: 'Bungee Inline', cursive;
+}
