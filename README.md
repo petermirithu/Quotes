@@ -1,6 +1,6 @@
 # Quotes App.
 
-Click here to view th Site.@[Quote App by Pyra](https://petermirithu.github.io/Quotes/) <br>
+Click here to view the Site.@[Quote App by Pyra !](https://petermirithu.github.io/Quotes/) <br>
 <hr>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9. 
