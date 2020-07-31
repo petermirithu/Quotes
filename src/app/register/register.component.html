@@ -1,0 +1,13 @@
+<h1 class="jumbotron text-center">Authentication Page</h1>
+
+<h2>Sign Up</h2>
+<input [(ngModel)]="register.username" placeholder="username"><br>
+<input [(ngModel)]="register.email" placeholder="email"><br>
+<input [(ngModel)]="register.password" placeholder="password" type="password"><br>
+<button class="btn btn-primary" (click)="usersignup()">Sign Up</button>
+
+
+<h2>Sign In</h2>
+<input [(ngModel)]="login.username" placeholder="username"><br>
+<input [(ngModel)]="login.password" placeholder="password" type="password"><br>
+<button class="btn btn-danger" (click)="usersignin()">Sign In</button>
